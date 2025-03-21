@@ -34,7 +34,7 @@ def decryptage(valeur):
         return f"Erreur lors du déchiffrement : {str(e)}"
 
 #Exercice 5.2
-@app.route('/encrypt_with_key/<key>/<valeur>')
+@app.route('/encrypt_key/<key>/<valeur>')
 def encrypt_with_key(key, valeur):
     try:
         f_custom = Fernet(key.encode())
@@ -43,7 +43,7 @@ def encrypt_with_key(key, valeur):
     except Exception as e:
         return f"Erreur d'encryption avec votre clé : {str(e)}"
 
-@app.route('/decrypt_with_key/<key>/<valeur>')
+@app.route('/decrypt_key/<key>/<valeur>')
 def decrypt_with_key(key, valeur):
     try:
         f_custom = Fernet(key.encode())
