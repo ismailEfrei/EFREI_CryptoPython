@@ -12,7 +12,7 @@ f = Fernet(key)
 
 @app.route('/')
 def hello_world():
-    return render_template('hello.html') #COMMENTAIRES
+    return render_template('hello.html') #COMMENTAIRE
 
 key = Fernet.generate_key()
 f = Fernet(key)
